@@ -4,82 +4,82 @@
 <meta charset="UTF-8">
 <title>MEAN Stack Deployment Assignment</title>
 <style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f4f7f9;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        background-color: #1a73e8;
-        color: white;
-        padding: 30px;
-        text-align: center;
-    }
-    header h1 {
-        margin: 0;
-    }
-    nav {
-        background-color: #fff;
-        padding: 10px 20px;
-        border-bottom: 1px solid #ddd;
-        text-align: center;
-    }
-    nav a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #1a73e8;
-        font-weight: bold;
-    }
-    nav a:hover {
-        text-decoration: underline;
-    }
-    section {
-        padding: 20px;
-        max-width: 1000px;
-        margin: auto;
-    }
-    .card {
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-    pre {
-        background-color: #f0f0f0;
-        padding: 10px;
-        border-radius: 5px;
-        overflow-x: auto;
-    }
-    img {
-        width: 100%;
-        max-width: 600px;
-        margin: 15px 0;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 15px;
-    }
-    th, td {
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: left;
-    }
-    th {
-        background-color: #1a73e8;
-        color: white;
-    }
-    footer {
-        text-align: center;
-        padding: 20px;
-        margin-top: 30px;
-        background-color: #f0f0f0;
-    }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+section {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+img {
+    width: 100%;
+    max-width: 600px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #1a73e8;
+    color: white;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #f0f0f0;
+}
 </style>
 </head>
 <body>
@@ -115,18 +115,24 @@ git push -u origin main
     <h2>Deployment on Ubuntu VM</h2>
     <ol>
         <li>Set up an Ubuntu VM on AWS or any cloud provider.</li>
-        <li>Install Docker and Docker Compose.</li>
+        <li>Install Docker and Docker Compose:</li>
+        <pre>
+sudo apt update
+sudo apt install docker.io docker-compose -y
+sudo systemctl enable docker
+sudo systemctl start docker
+        </pre>
         <li>Deploy application using Docker Compose:</li>
-    </ol>
-    <pre>
+        <pre>
 docker-compose up -d
-    </pre>
+        </pre>
+    </ol>
     <img src="https://via.placeholder.com/600x300.png?text=Docker+Compose+Deployment" alt="Docker Compose Deployment">
 </section>
 
 <section id="database" class="card">
     <h2>Database Setup</h2>
-    <p>MongoDB Docker image with persistent volume is used for data storage:</p>
+    <p>MongoDB Docker image with persistent volume for data storage:</p>
     <pre>
 services:
   mongo:
@@ -194,7 +200,7 @@ services:
         <li>MongoDB data persists across container restarts.</li>
         <li>Nginx correctly routes frontend and API traffic.</li>
     </ul>
-    <p><strong>Next Step:</strong> Replace placeholder links with actual screenshots from your VM, Docker builds, and CI/CD runs before submission.</p>
+    <p><strong>Next Step:</strong> Replace placeholder screenshot links with actual screenshots from your VM, Docker builds, and CI/CD runs before submission.</p>
 </section>
 
 <footer>
