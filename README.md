@@ -1,10 +1,10 @@
 # MEAN Stack Application Deployment Assignment
 
-**Containerization, Cloud Deployment & CI/CD Implementation**
+**Containerization, Cloud Deployment & CI/CD Implementation**  
 
 ---
 
-## Table of Contents
+## 📌 Table of Contents
 - [Repository Setup](#repository-setup)  
 - [Deployment on Ubuntu VM](#deployment-on-ubuntu-vm)  
 - [Database Setup](#database-setup)  
@@ -15,23 +15,25 @@
 
 ---
 
-## Repository Setup
+## 🗂 Repository Setup ✅
 
-1. Create a new GitHub repository for this project.  
-2. Push the complete application code:
+- Created a new GitHub repository: `crud-dd-task-mean-app`  
+- Pushed complete application code:
 
-
+```bash
 git init
 git add .
 git commit -m "Initial commit"
 git remote add origin git@github.com:USERNAME/crud-dd-task-mean-app.git
 git push -u origin main
+Status:
+
 Screenshot:
 
-Deployment on Ubuntu VM
-Set up a new Ubuntu VM on AWS, Azure, or any preferred cloud provider.
+☁ Deployment on Ubuntu VM ✅
+Created an Ubuntu VM on AWS / Azure.
 
-Install Docker and Docker Compose:
+Installed Docker and Docker Compose:
 
 bash
 Copy
@@ -40,16 +42,18 @@ sudo apt update
 sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
 sudo systemctl start docker
-Deploy the application using Docker Compose:
+Deployed application using Docker Compose:
 
 bash
 Copy
 Edit
 docker-compose up -d
+Status:
+
 Screenshot:
 
-Database Setup
-Using MongoDB Docker image with persistent volume for data storage:
+🗄 Database Setup ✅
+Using MongoDB Docker image with persistent volume:
 
 yaml
 Copy
@@ -59,27 +63,33 @@ services:
     image: mongo:6
     volumes:
       - mongo-data:/data/db
+Status:
+
 Screenshot:
 
-CI/CD Pipeline
+🔄 CI/CD Pipeline ✅
 Configured GitHub Actions to:
 
-Build updated Docker images for backend and frontend when changes are pushed.
+Build updated Docker images for backend and frontend on code push
 
-Push Docker images to Docker Hub.
+Push Docker images to Docker Hub
 
-Automatically pull the latest images and restart containers on the VM.
+Automatically pull latest images and restart containers on the VM
 
-Screenshot:
-
-Nginx Reverse Proxy
-Frontend requests routed to Angular application.
-
-/api/ requests routed to backend API.
+Status:
 
 Screenshot:
 
-Screenshots Overview
+🌐 Nginx Reverse Proxy ✅
+Frontend requests routed to Angular application
+
+/api/ requests routed to backend API
+
+Status:
+
+Screenshot:
+
+🖼 Screenshots Overview
 Step	Screenshot
 GitHub Repository Push	View
 Docker Compose Deployment	View
