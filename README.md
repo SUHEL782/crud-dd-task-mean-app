@@ -24,29 +24,23 @@
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin git@github.com:USERNAME/crud-dd-task-mean-app.git
+git remote add origin https://github.com/SUHEL782/crud-dd-task-mean-app
 git push -u origin main
 Status:
 
 Screenshot:
 
 ☁ Deployment on Ubuntu VM ✅
-Created an Ubuntu VM on AWS / Azure.
+Created an Ubuntu VM on GCP/ Azure.
 
 Installed Docker and Docker Compose:
 
-bash
-Copy
-Edit
 sudo apt update
 sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
 sudo systemctl start docker
 Deployed application using Docker Compose:
 
-bash
-Copy
-Edit
 docker-compose up -d
 Status:
 
@@ -54,10 +48,7 @@ Screenshot:
 
 🗄 Database Setup ✅
 Using MongoDB Docker image with persistent volume:
-
-yaml
-Copy
-Edit
+# Please see all file 
 services:
   mongo:
     image: mongo:6
@@ -85,14 +76,6 @@ Frontend requests routed to Angular application
 
 /api/ requests routed to backend API
 
-Status:
 
-Screenshot:
 
-🖼 Screenshots Overview
-Step	Screenshot
-GitHub Repository Push	View
-Docker Compose Deployment	View
-MongoDB Setup	View
-CI/CD Pipeline Execution	View
-Nginx Reverse Proxy	View
+
