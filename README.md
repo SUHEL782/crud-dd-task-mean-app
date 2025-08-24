@@ -1,211 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>MEAN Stack Deployment Assignment</title>
-<style>
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-header {
-    background-color: #1a73e8;
-    color: white;
-    padding: 30px;
-    text-align: center;
-}
-header h1 {
-    margin: 0;
-}
-nav {
-    background-color: #fff;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-    text-align: center;
-}
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #1a73e8;
-    font-weight: bold;
-}
-nav a:hover {
-    text-decoration: underline;
-}
-section {
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-.card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-}
-pre {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto;
-}
-img {
-    width: 100%;
-    max-width: 600px;
-    margin: 15px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-th {
-    background-color: #1a73e8;
-    color: white;
-}
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    background-color: #f0f0f0;
-}
-</style>
-</head>
-<body>
+# MEAN Stack Application Deployment Assignment
 
-<header>
-    <h1>MEAN Stack Application Deployment Assignment</h1>
-    <p>Containerization, Cloud Deployment & CI/CD Implementation</p>
-</header>
+**Containerization, Cloud Deployment & CI/CD Implementation**
 
-<nav>
-    <a href="#repo-setup">Repository Setup</a>
-    <a href="#deployment">Deployment</a>
-    <a href="#database">Database</a>
-    <a href="#cicd">CI/CD</a>
-    <a href="#nginx">Nginx</a>
-    <a href="#screenshots">Screenshots</a>
-</nav>
+---
 
-<section id="repo-setup" class="card">
-    <h2>Repository Setup</h2>
-    <p>Create a GitHub repository and push the complete application code:</p>
-    <pre>
+## Table of Contents
+- [Repository Setup](#repository-setup)  
+- [Deployment on Ubuntu VM](#deployment-on-ubuntu-vm)  
+- [Database Setup](#database-setup)  
+- [CI/CD Pipeline](#cicd-pipeline)  
+- [Nginx Reverse Proxy](#nginx-reverse-proxy)  
+- [Screenshots Overview](#screenshots-overview)  
+- [Conclusion](#conclusion)  
+
+---
+
+## Repository Setup
+
+1. Create a new GitHub repository for this project.  
+2. Push the complete application code:
+
+
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin git@github.com:USERNAME/repo.git
+git remote add origin git@github.com:USERNAME/crud-dd-task-mean-app.git
 git push -u origin main
-    </pre>
-    <img src="https://via.placeholder.com/600x300.png?text=GitHub+Repo+Push" alt="GitHub Repo Push">
-</section>
+Screenshot:
 
-<section id="deployment" class="card">
-    <h2>Deployment on Ubuntu VM</h2>
-    <ol>
-        <li>Set up an Ubuntu VM on AWS or any cloud provider.</li>
-        <li>Install Docker and Docker Compose:</li>
-        <pre>
+Deployment on Ubuntu VM
+Set up a new Ubuntu VM on AWS, Azure, or any preferred cloud provider.
+
+Install Docker and Docker Compose:
+
+bash
+Copy
+Edit
 sudo apt update
 sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
 sudo systemctl start docker
-        </pre>
-        <li>Deploy application using Docker Compose:</li>
-        <pre>
-docker-compose up -d
-        </pre>
-    </ol>
-    <img src="https://via.placeholder.com/600x300.png?text=Docker+Compose+Deployment" alt="Docker Compose Deployment">
-</section>
+Deploy the application using Docker Compose:
 
-<section id="database" class="card">
-    <h2>Database Setup</h2>
-    <p>MongoDB Docker image with persistent volume for data storage:</p>
-    <pre>
+bash
+Copy
+Edit
+docker-compose up -d
+Screenshot:
+
+Database Setup
+Using MongoDB Docker image with persistent volume for data storage:
+
+yaml
+Copy
+Edit
 services:
   mongo:
     image: mongo:6
     volumes:
       - mongo-data:/data/db
-    </pre>
-    <img src="https://via.placeholder.com/600x300.png?text=MongoDB+Setup" alt="MongoDB Setup">
-</section>
+Screenshot:
 
-<section id="cicd" class="card">
-    <h2>CI/CD Pipeline</h2>
-    <ul>
-        <li>Build Docker images for backend and frontend on code push.</li>
-        <li>Push Docker images to Docker Hub.</li>
-        <li>Automatically pull latest images and restart containers on the VM.</li>
-    </ul>
-    <img src="https://via.placeholder.com/600x300.png?text=CI%2FCD+Pipeline" alt="CI/CD Pipeline">
-</section>
+CI/CD Pipeline
+Configured GitHub Actions to:
 
-<section id="nginx" class="card">
-    <h2>Nginx Reverse Proxy</h2>
-    <ul>
-        <li>Frontend requests routed to Angular application.</li>
-        <li>/api/ requests routed to backend API.</li>
-    </ul>
-    <img src="https://via.placeholder.com/600x300.png?text=Nginx+Reverse+Proxy" alt="Nginx Reverse Proxy">
-</section>
+Build updated Docker images for backend and frontend when changes are pushed.
 
-<section id="screenshots" class="card">
-    <h2>Screenshots Overview</h2>
-    <table>
-        <tr>
-            <th>Step</th>
-            <th>Screenshot</th>
-        </tr>
-        <tr>
-            <td>GitHub Repository Push</td>
-            <td><a href="https://via.placeholder.com/600x300.png?text=GitHub+Repo+Push">View</a></td>
-        </tr>
-        <tr>
-            <td>Docker Compose Deployment</td>
-            <td><a href="https://via.placeholder.com/600x300.png?text=Docker+Compose+Deployment">View</a></td>
-        </tr>
-        <tr>
-            <td>MongoDB Setup</td>
-            <td><a href="https://via.placeholder.com/600x300.png?text=MongoDB+Setup">View</a></td>
-        </tr>
-        <tr>
-            <td>CI/CD Pipeline Execution</td>
-            <td><a href="https://via.placeholder.com/600x300.png?text=CI%2FCD+Pipeline">View</a></td>
-        </tr>
-        <tr>
-            <td>Nginx Reverse Proxy</td>
-            <td><a href="https://via.placeholder.com/600x300.png?text=Nginx+Reverse+Proxy">View</a></td>
-        </tr>
-    </table>
-</section>
+Push Docker images to Docker Hub.
 
-<section class="card">
-    <h2>Conclusion</h2>
-    <ul>
-        <li>MEAN application is successfully deployed and accessible on port 80.</li>
-        <li>CI/CD pipeline ensures automated builds, Docker image pushes, and deployment.</li>
-        <li>MongoDB data persists across container restarts.</li>
-        <li>Nginx correctly routes frontend and API traffic.</li>
-    </ul>
-    <p><strong>Next Step:</strong> Replace placeholder screenshot links with actual screenshots from your VM, Docker builds, and CI/CD runs before submission.</p>
-</section>
+Automatically pull the latest images and restart containers on the VM.
 
-<footer>
-    <p>&copy; 2025 MEAN Stack Deployment Assignment</p>
-</footer>
+Screenshot:
 
-</body>
-</html>
+Nginx Reverse Proxy
+Frontend requests routed to Angular application.
+
+/api/ requests routed to backend API.
+
+Screenshot:
+
+Screenshots Overview
+Step	Screenshot
+GitHub Repository Push	View
+Docker Compose Deployment	View
+MongoDB Setup	View
+CI/CD Pipeline Execution	View
+Nginx Reverse Proxy	View
