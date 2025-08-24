@@ -1,182 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>MEAN Stack Application Deployment Assignment</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: #1a73e8;
-        }
-        pre {
-            background-color: #eee;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        img {
-            max-width: 100%;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        table, th, td {
-            border: 1px solid #aaa;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        hr {
-            margin: 30px 0;
-            border: none;
-            border-top: 1px solid #ccc;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>MEAN Stack Deployment Assignment</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f7f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #1a73e8;
+        color: white;
+        padding: 30px;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+    }
+    nav {
+        background-color: #fff;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+    }
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #1a73e8;
+        font-weight: bold;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    section {
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    pre {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+    }
+    img {
+        width: 100%;
+        max-width: 600px;
+        margin: 15px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #1a73e8;
+        color: white;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+        background-color: #f0f0f0;
+    }
+</style>
 </head>
 <body>
 
-<h1>MEAN Stack Application Deployment Assignment</h1>
+<header>
+    <h1>MEAN Stack Application Deployment Assignment</h1>
+    <p>Containerization, Cloud Deployment & CI/CD Implementation</p>
+</header>
 
-<h2>Project Overview</h2>
-<p>This project is a full-stack MEAN (MongoDB, Express, Angular, Node.js) application.<br>
-The goal is to containerize the application, deploy it on a cloud VM using Docker Compose, and implement CI/CD using GitHub Actions.</p>
+<nav>
+    <a href="#repo-setup">Repository Setup</a>
+    <a href="#deployment">Deployment</a>
+    <a href="#database">Database</a>
+    <a href="#cicd">CI/CD</a>
+    <a href="#nginx">Nginx</a>
+    <a href="#screenshots">Screenshots</a>
+</nav>
 
-<p><strong>Repository:</strong> <a href="YOUR_REPO_LINK_HERE">GitHub Repository Link</a><br>
-<strong>Docker Hub:</strong> Images for frontend and backend are pushed to Docker Hub.</p>
-
-<hr>
-
-<h2>Table of Contents</h2>
-<ol>
-    <li><a href="#repository-setup">Repository Setup</a></li>
-    <li><a href="#deployment-on-ubuntu-vm">Deployment on Ubuntu VM</a></li>
-    <li><a href="#database-setup">Database Setup</a></li>
-    <li><a href="#cicd-pipeline">CI/CD Pipeline</a></li>
-    <li><a href="#nginx-reverse-proxy">Nginx Reverse Proxy</a></li>
-    <li><a href="#screenshots">Screenshots</a></li>
-</ol>
-
-<hr>
-
-<h2 id="repository-setup">Repository Setup</h2>
-<p>Created a new GitHub repository and pushed the complete application code:</p>
-
-<pre>
+<section id="repo-setup" class="card">
+    <h2>Repository Setup</h2>
+    <p>Create a GitHub repository and push the complete application code:</p>
+    <pre>
 git init
 git add .
 git commit -m "Initial commit"
 git remote add origin git@github.com:USERNAME/repo.git
 git push -u origin main
-</pre>
+    </pre>
+    <img src="https://via.placeholder.com/600x300.png?text=GitHub+Repo+Push" alt="GitHub Repo Push">
+</section>
 
-<p><strong>Screenshot:</strong></p>
-<img src="https://via.placeholder.com/600x300.png?text=GitHub+Repo+Push" alt="GitHub Repo Push">
+<section id="deployment" class="card">
+    <h2>Deployment on Ubuntu VM</h2>
+    <ol>
+        <li>Set up an Ubuntu VM on AWS or any cloud provider.</li>
+        <li>Install Docker and Docker Compose.</li>
+        <li>Deploy application using Docker Compose:</li>
+    </ol>
+    <pre>
+docker-compose up -d
+    </pre>
+    <img src="https://via.placeholder.com/600x300.png?text=Docker+Compose+Deployment" alt="Docker Compose Deployment">
+</section>
 
-<hr>
+<section id="database" class="card">
+    <h2>Database Setup</h2>
+    <p>MongoDB Docker image with persistent volume is used for data storage:</p>
+    <pre>
+services:
+  mongo:
+    image: mongo:6
+    volumes:
+      - mongo-data:/data/db
+    </pre>
+    <img src="https://via.placeholder.com/600x300.png?text=MongoDB+Setup" alt="MongoDB Setup">
+</section>
 
-<h2 id="deployment-on-ubuntu-vm">Deployment on Ubuntu VM</h2>
-<ol>
-    <li>Created an Ubuntu VM on AWS (or preferred cloud).</li>
-    <li>Installed Docker and Docker Compose.</li>
-    <li>Deployed the application using Docker Compose.</li>
-</ol>
+<section id="cicd" class="card">
+    <h2>CI/CD Pipeline</h2>
+    <ul>
+        <li>Build Docker images for backend and frontend on code push.</li>
+        <li>Push Docker images to Docker Hub.</li>
+        <li>Automatically pull latest images and restart containers on the VM.</li>
+    </ul>
+    <img src="https://via.placeholder.com/600x300.png?text=CI%2FCD+Pipeline" alt="CI/CD Pipeline">
+</section>
 
-<p><strong>Screenshot:</strong></p>
-<img src="https://via.placeholder.com/600x300.png?text=Docker+Compose+Deployment" alt="Docker Compose Deployment">
+<section id="nginx" class="card">
+    <h2>Nginx Reverse Proxy</h2>
+    <ul>
+        <li>Frontend requests routed to Angular application.</li>
+        <li>/api/ requests routed to backend API.</li>
+    </ul>
+    <img src="https://via.placeholder.com/600x300.png?text=Nginx+Reverse+Proxy" alt="Nginx Reverse Proxy">
+</section>
 
-<hr>
+<section id="screenshots" class="card">
+    <h2>Screenshots Overview</h2>
+    <table>
+        <tr>
+            <th>Step</th>
+            <th>Screenshot</th>
+        </tr>
+        <tr>
+            <td>GitHub Repository Push</td>
+            <td><a href="https://via.placeholder.com/600x300.png?text=GitHub+Repo+Push">View</a></td>
+        </tr>
+        <tr>
+            <td>Docker Compose Deployment</td>
+            <td><a href="https://via.placeholder.com/600x300.png?text=Docker+Compose+Deployment">View</a></td>
+        </tr>
+        <tr>
+            <td>MongoDB Setup</td>
+            <td><a href="https://via.placeholder.com/600x300.png?text=MongoDB+Setup">View</a></td>
+        </tr>
+        <tr>
+            <td>CI/CD Pipeline Execution</td>
+            <td><a href="https://via.placeholder.com/600x300.png?text=CI%2FCD+Pipeline">View</a></td>
+        </tr>
+        <tr>
+            <td>Nginx Reverse Proxy</td>
+            <td><a href="https://via.placeholder.com/600x300.png?text=Nginx+Reverse+Proxy">View</a></td>
+        </tr>
+    </table>
+</section>
 
-<h2 id="database-setup">Database Setup</h2>
-<p>Using MongoDB Docker image with persistent volume for data storage.</p>
+<section class="card">
+    <h2>Conclusion</h2>
+    <ul>
+        <li>MEAN application is successfully deployed and accessible on port 80.</li>
+        <li>CI/CD pipeline ensures automated builds, Docker image pushes, and deployment.</li>
+        <li>MongoDB data persists across container restarts.</li>
+        <li>Nginx correctly routes frontend and API traffic.</li>
+    </ul>
+    <p><strong>Next Step:</strong> Replace placeholder links with actual screenshots from your VM, Docker builds, and CI/CD runs before submission.</p>
+</section>
 
-<p><strong>Screenshot:</strong></p>
-<img src="https://via.placeholder.com/600x300.png?text=MongoDB+Setup" alt="MongoDB Setup">
-
-<hr>
-
-<h2 id="cicd-pipeline">CI/CD Pipeline</h2>
-<p>Configured GitHub Actions to:</p>
-<ul>
-    <li>Build Docker images for backend and frontend when changes are pushed to GitHub.</li>
-    <li>Push images to Docker Hub.</li>
-    <li>Pull latest images and restart containers on the VM automatically.</li>
-</ul>
-
-<p><strong>Screenshot:</strong></p>
-<img src="https://via.placeholder.com/600x300.png?text=CI%2FCD+Pipeline" alt="CI/CD Pipeline">
-
-<hr>
-
-<h2 id="nginx-reverse-proxy">Nginx Reverse Proxy</h2>
-<p>Configured Nginx to route:</p>
-<ul>
-    <li>Frontend requests to Angular app.</li>
-    <li><code>/api/</code> requests to backend API.</li>
-</ul>
-
-<p><strong>Screenshot:</strong></p>
-<img src="https://via.placeholder.com/600x300.png?text=Nginx+Reverse+Proxy" alt="Nginx Reverse Proxy">
-
-<hr>
-
-<h2 id="screenshots">Screenshots Overview</h2>
-<table>
-    <tr>
-        <th>Step</th>
-        <th>Screenshot</th>
-    </tr>
-    <tr>
-        <td>GitHub Repository Push</td>
-        <td><a href="https://via.placeholder.com/600x300.png?text=GitHub+Repo+Push">Link</a></td>
-    </tr>
-    <tr>
-        <td>Docker Compose Deployment</td>
-        <td><a href="https://via.placeholder.com/600x300.png?text=Docker+Compose+Deployment">Link</a></td>
-    </tr>
-    <tr>
-        <td>MongoDB Setup</td>
-        <td><a href="https://via.placeholder.com/600x300.png?text=MongoDB+Setup">Link</a></td>
-    </tr>
-    <tr>
-        <td>CI/CD Pipeline Execution</td>
-        <td><a href="https://via.placeholder.com/600x300.png?text=CI%2FCD+Pipeline">Link</a></td>
-    </tr>
-    <tr>
-        <td>Nginx Reverse Proxy</td>
-        <td><a href="https://via.placeholder.com/600x300.png?text=Nginx+Reverse+Proxy">Link</a></td>
-    </tr>
-</table>
-
-<hr>
-
-<h2>Conclusion</h2>
-<ul>
-    <li>MEAN application is successfully deployed and accessible on port 80.</li>
-    <li>CI/CD pipeline ensures automated builds, Docker image pushes, and deployment.</li>
-    <li>MongoDB data persists across container restarts.</li>
-    <li>Nginx correctly routes frontend and API traffic.</li>
-</ul>
-
-<p><strong>Next Step:</strong> Replace all placeholder links with actual screenshots from your VM, Docker builds, and CI/CD runs before submission.</p>
+<footer>
+    <p>&copy; 2025 MEAN Stack Deployment Assignment</p>
+</footer>
 
 </body>
 </html>
