@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Tutorial } from '../models/tutorial.model';
 
-const baseUrl = 'http://localhost:8080/api/tutorials';
+// Use backend service name defined in docker-compose
+const baseUrl = 'http://35.203.79.132:3000/api/tutorials';
 
 @Injectable({
   providedIn: 'root'
@@ -40,3 +41,4 @@ export class TutorialService {
     return this.http.get<Tutorial[]>(`${baseUrl}?title=${title}`);
   }
 }
+
