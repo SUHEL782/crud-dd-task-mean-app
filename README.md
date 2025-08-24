@@ -1,81 +1,71 @@
-# MEAN Stack Application Deployment Assignment
+🚀 MEAN Stack Application Deployment Assignment
 
-**Containerization, Cloud Deployment & CI/CD Implementation**  
+Containerization | Cloud Deployment | CI/CD Automation
 
----
+📑 Table of Contents
 
-## 📌 Table of Contents
-- [Repository Setup](#repository-setup)  
-- [Deployment on Ubuntu VM](#deployment-on-ubuntu-vm)  
-- [Database Setup](#database-setup)  
-- [CI/CD Pipeline](#cicd-pipeline)  
-- [Nginx Reverse Proxy](#nginx-reverse-proxy)  
-- [Screenshots Overview](#screenshots-overview)  
-- [Conclusion](#conclusion)  
+Repository Setup
 
----
+Deployment on Ubuntu VM
 
-## 🗂 Repository Setup ✅
+Database Setup
 
-- Created a new GitHub repository: `crud-dd-task-mean-app`  
-- Pushed complete application code:
+CI/CD Pipeline
 
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/SUHEL782/crud-dd-task-mean-app
-git push -u origin main
-Status:
+Nginx Reverse Proxy
 
-Screenshot:
+Conclusion
+
+🗂 Repository Setup ✅
+
+Created GitHub repository: crud-dd-task-mean-app
+
+Pushed complete MEAN stack application code to the repository.
 
 ☁ Deployment on Ubuntu VM ✅
-Created an Ubuntu VM on GCP/ Azure.
 
-Installed Docker and Docker Compose:
+Provisioned an Ubuntu VM on cloud (GCP/Azure).
 
-sudo apt update
-sudo apt install docker.io docker-compose -y
-sudo systemctl enable docker
-sudo systemctl start docker
-Deployed application using Docker Compose:
+Installed Docker and Docker Compose.
 
-docker-compose up -d
-Status:
-
-Screenshot:
+Deployed the application stack using docker-compose up -d.
 
 🗄 Database Setup ✅
-Using MongoDB Docker image with persistent volume:
-# Please see all file 
-services:
-  mongo:
-    image: mongo:6
-    volumes:
-      - mongo-data:/data/db
-Status:
 
-Screenshot:
+Configured MongoDB service with persistent storage using Docker volumes.
+
+Ensures database data is retained across container restarts.
 
 🔄 CI/CD Pipeline ✅
-Configured GitHub Actions to:
 
-Build updated Docker images for backend and frontend on code push
+Configured GitHub Actions workflow to:
 
-Push Docker images to Docker Hub
+Build Docker images for backend and frontend.
 
-Automatically pull latest images and restart containers on the VM
+Push images to Docker Hub.
 
-Status:
-
-Screenshot:
+Pull updated images and restart services automatically on VM.
 
 🌐 Nginx Reverse Proxy ✅
-Frontend requests routed to Angular application
 
-/api/ requests routed to backend API
+Configured Nginx to manage routing:
 
+Angular frontend served at root path /.
 
+Backend API accessible via /api/.
 
+🏁 Conclusion
 
+The MEAN stack application was successfully:
+
+Containerized with Docker
+
+Deployed on a cloud-based Ubuntu VM
+
+Connected with MongoDB database (persistent volume)
+
+Automated with a GitHub Actions CI/CD pipeline
+
+Served via Nginx reverse proxy
+
+✅ The deployment pipeline is automated, scalable, and production-ready.
