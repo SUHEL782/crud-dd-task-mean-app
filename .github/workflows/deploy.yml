@@ -1,4 +1,4 @@
-name: Deploy MEAN App to GCP VM
+name: Deploy MEAN App to GCP VM    # All Setup GCP Inviroment
 
 on:
   push:
