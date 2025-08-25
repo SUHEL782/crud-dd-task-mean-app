@@ -4,17 +4,17 @@ Containerization | Cloud Deployment | CI/CD Automation
 
 📑 Table of Contents
 
-Repository Setup
+Repository Setup:-
 
-Deployment on Ubuntu VM
+Deployment on Ubuntu VM:-
 
-Database Setup
+Database Setup:-
 
-CI/CD Pipeline
+CI/CD Pipeline:-
 
-Nginx Reverse Proxy
+Nginx Reverse Proxy:-
 
-Conclusion
+Conclusion:-
 
 Screenshots
 
