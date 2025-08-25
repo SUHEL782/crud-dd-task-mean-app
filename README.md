@@ -79,12 +79,13 @@ Served via Nginx reverse proxy
 
 ## 📸 Screenshots
 
-![Screenshot 1](Screenshot%202025-08-24%20084604.png)
-![Screenshot 2](Screenshot%202025-08-24%20084658.png)
-![Screenshot 3](Screenshot%202025-08-24%20085055%20-%20Copy%20-%20Copy.png)
-![Screenshot 4](Screenshot%202025-08-24%20160635%20-%20Copy.png)
-![Screenshot 5](Screenshot%202025-08-24%20160738%20-%20Copy.png)
-![Screenshot 6](Screenshot%202025-08-24%20160854%20-%20Copy.png)
-![Important Image 1](Important_Images.png)
-![Important Image 2](Important_Images2.png)
-![Important Image 3](Important_Images3.png)
+![Screenshot](images/Screenshot%202025-08-24%20092159.png)  
+![Screenshot](images/Screenshot%202025-08-24%20092159%20-%20Copy.png)  
+![Screenshot](images/Screenshot%202025-08-24%20160635.png)  
+![Screenshot](images/Screenshot%202025-08-24%20160635%20-%20Copy%20(2).png)  
+![Screenshot](images/Screenshot%202025-08-24%20160635%20-%20Copy%20-%20Copy.png)  
+![Screenshot](images/Screenshot%202025-08-24%20160738.png)  
+![Screenshot](images/Screenshot%202025-08-24%20160738%20-%20Copy.png)  
+![Screenshot](images/Screenshot%202025-08-24%20160738%20-%20Copy%20-%20Copy.png)  
+![Screenshot](images/Screenshot%202025-08-24%20160854.png)  
+![Screenshot](images/Screenshot%202025-08-24%20160854%20-%20Copy.png)  
