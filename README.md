@@ -16,6 +16,8 @@ Nginx Reverse Proxy
 
 Conclusion
 
+Screenshots
+
 🗂 Repository Setup ✅
 
 Created GitHub repository: crud-dd-task-mean-app
